@@ -30,14 +30,14 @@ def added_element_is_displayed(driver_instance):
 
 
 def delete_added_element(driver_instance):
-    wait_for_visibility_of_element_by_xpath(driver_instance,added_element)
+    wait_for_visibility_of_element_by_xpath(driver_instance, added_element)
     elem = driver_instance.find_element(By.XPATH, added_element)
     elem.click()
 
 
 def element_invisible(driver_instance):
     try:
-        wait_for_invisibility_of_element_by_xpath(driver_instance,added_element)
+        wait_for_invisibility_of_element_by_xpath(driver_instance, added_element)
         return True
     except NoSuchElementException:
         return False

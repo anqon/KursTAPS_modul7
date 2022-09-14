@@ -1,8 +1,7 @@
-from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.by import By
 from selenium.common.exceptions import *
 
 
@@ -11,10 +10,12 @@ def hover_over_element_by_xpath(driver_instance, xpath):
     hover = ActionChains(driver_instance).move_to_element(elem)
     hover.perform()
 
+
 def hover_over_element_by_id(driver_instance, id):
     elem = driver_instance.find_element(By.ID, id)
     hover = ActionChains(driver_instance).move_to_element(elem)
     hover.perform()
+
 
 def wait_for_visibility_of_element_by_xpath(driver_instance, xpath, time_to_wait=5):
     try:
@@ -51,6 +52,7 @@ def wait_for_clicable_of_element_by_xpath(driver_instance, xpath, time_to_wait=5
     except TimeoutException:
         elem = False
     return elem
+
 
 def wait_for_clicable_of_element_by_id(driver_instance, id, time_to_wait=5):
     try:
