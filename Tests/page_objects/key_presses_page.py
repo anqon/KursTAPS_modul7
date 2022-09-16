@@ -12,9 +12,11 @@ def click_key_presses_tab(driver_instance):
     elem = wait_for_visibility_of_element_by_id(driver_instance, key_presses_tab)
     elem.click()
 
+
 def key_presses_content_visibility(driver_instance):
     elem = wait_for_visibility_of_element_by_id(driver_instance, key_presses_content)
     return elem.is_displayed()
+
 
 def key_presses_test_Enter(driver_instance):
     elem = wait_for_visibility_of_element_by_id(driver_instance, key_presses_field)

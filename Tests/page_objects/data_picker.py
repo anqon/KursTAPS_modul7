@@ -1,18 +1,20 @@
 from Tests.helpers.support_functions import *
-from selenium.webdriver.common.by import By
 
 
 data_picker_tab = 'datepicker-header'
 data_picker_content = 'datepicker-content'
 data_picker_field = '//*[@id="start"]'
 
+
 def click_data_picker_tab(driver_instance):
     elem = wait_for_visibility_of_element_by_id(driver_instance,data_picker_tab)
     elem.click()
 
+
 def data_picker_content_visibility(driver_instance):
     elem = wait_for_visibility_of_element_by_id(driver_instance,data_picker_content)
     return elem.is_displayed()
+
 
 def data_picker_correct_test(driver_instance):
     elem = wait_for_clicable_of_element_by_xpath(driver_instance,data_picker_field)

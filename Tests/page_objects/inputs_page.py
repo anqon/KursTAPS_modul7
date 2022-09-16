@@ -24,6 +24,7 @@ def send_correct_value_to_input(driver_instance):
     else:
         return False
 
+
 def send_incorrect_value_to_input(driver_instance):
     wait_for_clicable_of_element_by_xpath(driver_instance, '//*[@id="inputs-content"]/div/input')
     elem = driver_instance.find_element(By.XPATH, inputs_box)

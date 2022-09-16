@@ -18,7 +18,7 @@ def hover_over_element_by_id(driver_instance, id):
 
 def wait_for_visibility_of_element_by_xpath(driver_instance, xpath, time_to_wait=5):
     try:
-        elem = WebDriverWait(driver_instance, time_to_wait).until(EC.visibility_of_element_located(By.XPATH, xpath))
+        elem = WebDriverWait(driver_instance, time_to_wait).until(EC.visibility_of_element_located((By.XPATH, xpath)))
     except TimeoutException:
         elem = False
     return elem

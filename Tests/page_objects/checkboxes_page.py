@@ -12,9 +12,10 @@ def click_checkboxes_tab(driver_instance):
     elem = wait_for_visibility_of_element_by_id(driver_instance, checkboxes_tab)
     elem.click()
 
+
 def checkboxes_content_visibility(driver_instance):
     elem = wait_for_visibility_of_element_by_id(driver_instance, checkboxes_content)
-    return elem.is_displayed
+    return elem.is_displayed()
 
 
 def checkbox1_click_if_unchecked(driver_instance):
@@ -24,9 +25,7 @@ def checkbox1_click_if_unchecked(driver_instance):
         elem.click()
 
 
-
 def checkbox2_click_if_checked(driver_instance):
-    #checkbox1_click =
     wait_for_visibility_of_element_by_id(driver_instance, checkboxes)
     elem = driver_instance.find_element(By.XPATH, checkbox2)
     if elem.get_attribute("checked") == "true":

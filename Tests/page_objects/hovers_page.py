@@ -11,7 +11,6 @@ third_pic = '//*[@id="hovers-content"]/div/div[3]/img'
 third_pic_link = '//*[@id="hovers-content"]/div/div[3]/div/a'
 
 
-
 def click_hovers_tab(driver_instance):
     elem = wait_for_visibility_of_element_by_id(driver_instance, hover_header)
     elem.click()

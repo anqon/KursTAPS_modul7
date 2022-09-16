@@ -30,6 +30,7 @@ def click_button1_inside_iframe(driver_instance):
     else:
         return False
 
+
 def click_button2_inside_iframe(driver_instance):
     wait_for_visibility_of_element_by_id(driver_instance, iframe_main, time_to_wait=5)
     driver_instance.switch_to.frame(driver_instance.find_element(By.TAG_NAME,'iframe'))
@@ -39,6 +40,7 @@ def click_button2_inside_iframe(driver_instance):
         return True
     else:
         return False
+
 
 def make_screen(driver_instance):
     elem = driver_instance.find_element(By.ID, "whichButtonIsClickedMessage")

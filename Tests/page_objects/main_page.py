@@ -1,5 +1,4 @@
 from Tests.helpers.support_functions import *
-from selenium.webdriver.common.by import By
 
 home_content = 'accordion_child'
 tutaj_link = '//*[@id="test-content"]/div/p/a'
