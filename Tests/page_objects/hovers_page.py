@@ -22,16 +22,19 @@ def hovers_content_displayed(driver_instance):
 
 
 def hover_over_first_pic_and_click(driver_instance):
+    wait_for_visibility_of_element_by_xpath(driver_instance,first_pic)
     hover_over_element_by_xpath(driver_instance, first_pic)
     elem = driver_instance.find_element(By.XPATH, first_pic_link).click()
 
 
 def hover_over_second_pic_and_click(driver_instance):
+    wait_for_visibility_of_element_by_xpath(driver_instance,second_pic)
     hover_over_element_by_xpath(driver_instance, second_pic)
     elem = driver_instance.find_element(By.XPATH, second_pic_link).click()
 
 
 def hover_over_third_pic_and_click(driver_instance):
+    wait_for_visibility_of_element_by_xpath(driver_instance,third_pic)
     hover_over_element_by_xpath(driver_instance, third_pic)
     elem = driver_instance.find_element(By.XPATH, third_pic_link).click()
 

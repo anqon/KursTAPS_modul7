@@ -1,11 +1,8 @@
 import unittest
-
 from selenium import webdriver
 from Tests.page_objects import main_page,data_picker,hovers_page,inputs_page,basic_auth_page,iframe_page,checkboxes_page,form_page,dropdown_list_page,key_presses_page,drag_and_drop_page,add_remove_elements_page,status_codes_page
 from time import sleep
 from Tests.helpers.support_functions import *
-
-
 
 class Tests(unittest.TestCase):
     def setUp(self) -> None:
@@ -195,3 +192,5 @@ class Tests(unittest.TestCase):
         self.assertTrue(iframe_page.click_button2_inside_iframe(self.driver))
         iframe_page.make_screen(self.driver)
 
+if __name__ == '__main__':
+    unittest.main()
